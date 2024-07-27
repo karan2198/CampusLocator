@@ -17,9 +17,10 @@ const db_URI = process.env.db_URI;
 
 //MIDDLEWARE
 const corsOptions = {
-    origin: 'http://localhost:5173', // frontend origin
+    origin: ['http://localhost:5173', 'https://campus-locator.vercel.app'],
     optionsSuccessStatus: 200,
 };
+  
 
 app.use(cors(corsOptions));
 app.use(express.json());
