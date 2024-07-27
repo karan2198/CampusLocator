@@ -8,7 +8,7 @@ import Timetable from './views/Timetable/Timetable'
 import Profile from './views/Profile/Profile'
 import Search from './views/Search/Search'
 import About from './views/About/About'
-import Contact from './views/ContactUs/contact'
+import Contact from './views/Contact/contact'
 
 function App() {
 
