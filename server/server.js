@@ -12,7 +12,7 @@ import profileRoutes from './routes/profileRoutes.js'
 
 //GENERAL CONSTANTS
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const db_URI = process.env.db_URI;
 
 //MIDDLEWARE
@@ -36,7 +36,9 @@ const connectDB = async url => {
         .then(() => console.log('Database Connected'))
         .catch(err => console.log(err))
 }
-
+app.get('/', (req, res) => {
+    res.send('Server is up and running')
+})
 //PORT LISTEN
 app.listen(PORT, async () => {
     await connectDB(db_URI);
